@@ -1,7 +1,7 @@
 Create_parking_lot 6
 Park KA-01-HH-1234 White
 Park PB-01-HH-1234 White
-Slot_numbers_for_White
+Slot_numbers_for_colour White
 Park PB-01-TG-2341 Black
 Slot_number_for_car_with_number PB-01-HH-1234
 Leave 2
