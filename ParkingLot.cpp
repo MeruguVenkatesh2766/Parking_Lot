@@ -14,6 +14,10 @@ void ParkingLot :: createParkingLot(int n)
 	{
 		this -> MAX_SIZE = n;
 		slots.assign(n + 1, 0); //each slot will have initial value 0 i.e all slots empty
+		for(int i=1;i<=n;i++)
+		{
+			q.push(i);
+		}	
 		cout << "Created parking of " << n << " slots" << endl;
 	}
 
@@ -36,15 +40,8 @@ void ParkingLot :: park(string regNo , string colour)
 	else
 	{
 		//find first vacant slot nearest to the entry point
-		int vacantSlot;
-		for (int i = 1; i <= MAX_SIZE; i++)
-		{
-			if (slots[i] == 0)
-			{
-				vacantSlot = i;
-				break;
-			}
-		}
+		int vacantSlot = q.top();
+		q.pop();
 
 		//mark that slot as occupied
 		slots[vacantSlot] = 1;
@@ -146,6 +143,7 @@ void ParkingLot :: leave(int slotNo)
 		string regNo = slotDetails[slotNo].first;
 		string colour = slotDetails[slotNo].second;
 		slotDetails.erase(slotNo); //erase car details from the map
+		q.push(slotNo);
 
 		cout << "Slot number " << slotNo << " vacated, the car with vehicle registration number \"" << regNo << "\" left the space, the colour " << colour << endl;
 	}
