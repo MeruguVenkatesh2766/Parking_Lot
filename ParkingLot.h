@@ -36,7 +36,8 @@ public:
 	/*
 	Note : All the below methods are implemented in ParkingLot.cpp file
 	*/
-
+        priority_queue<int, vector<int>, greater<int> > q;
+	
 	void createParkingLot(int n); //method to create a parking lot with n slots
 
 	void park(string regNo , string colour); //method to park a car with a given registration no and colour
