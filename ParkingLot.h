@@ -36,7 +36,7 @@ public:
 	/*
 	Note : All the below methods are implemented in ParkingLot.cpp file
 	*/
-        priority_queue<int, vector<int>, greater<int> > q;
+        priority_queue<int, vector<int>, greater<int> > q;//To get the nearest vacant slot from the beginning (minimum slot number) 
 	
 	void createParkingLot(int n); //method to create a parking lot with n slots
 
