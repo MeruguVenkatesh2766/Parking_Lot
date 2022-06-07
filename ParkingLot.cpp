@@ -153,4 +153,12 @@ void ParkingLot :: leave(int slotNo)
 	{
 		cout << "Slot number " << slotNo << " is already empty" << endl;
 	}
+void ParkingLot :: display()
+        {  
+	        for(auto p : slotDetails)
+		{
+			cout<<"Slot No : "<<p.first<<", Reg No : "<<p.second.first<<", Colour of the Vehicle : "<<p.second.second<<endl;
+		}
+        }
+	
 }
