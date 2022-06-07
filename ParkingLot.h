@@ -49,4 +49,5 @@ public:
 	void leave(int slotNo); //method to vacate a slot
 
 	void getRegistrationNumbersFromcolour(string colour); //method to get registration no of all cars parked by colour
+	void display();//method to display all the vehicles are parked 
 };
